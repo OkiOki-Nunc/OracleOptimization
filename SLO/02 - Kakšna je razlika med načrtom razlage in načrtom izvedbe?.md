@@ -1,0 +1,7 @@
+Izraza "načrt razlage" (Explain Plan) in "načrt izvajanja" (Execution Plan) se pogosto uporabljata izmenično, vendar imata v kontekstu optimizacije SQL poizvedb nekoliko različna pomena:
+
+Načrt razlage (Explain Plan): Načrt razlage je prikaz izbranega načrta izvajanja optimizatorja za SQL poizvedbo. Prikazuje operacije, za katere je optimizator določil, da so najučinkovitejši način pridobivanja podatkov glede na razpoložljive statistike in druge dejavnike. Načrt razlage je diagnostično orodje, ki vam pomaga razumeti, kako bo poizvedba izvedena, in prepoznati morebitna ozka grla pri zmogljivosti. Načrt razlage lahko ustvarite z ukazom EXPLAIN PLAN, paketom DBMS_XPLAN ali funkcijo AUTOTRACE v SQL*Plus, med drugimi metodami.
+
+Načrt izvajanja (Execution Plan): Načrt izvajanja je dejanski niz korakov, ki jih sledi mehanizem podatkovne zbirke pri izvajanju SQL poizvedbe. Čeprav je načrt razlage ocena načrta izvajanja, se dejanski načrt izvajanja lahko nekoliko razlikuje zaradi dejavnikov, kot so porazdelitev podatkov, razpoložljivi viri in druge dinamične razmere. Načrt izvajanja ustvari optimizator Oracle med postopkom optimizacije poizvedb in ga nato izvede mehanizem podatkovne zbirke.
+
+Povzeto, načrt razlage je berljiv prikaz ocenjenega načrta izvajanja optimizatorja za SQL poizvedbo. Pomaga vam razumeti, kako bo poizvedba izvedena in diagnosticirati morebitne težave pri zmogljivosti. Načrt izvajanja pa je dejanski niz korakov, ki jih podatkovna zbirka izvede za izvajanje poizvedbe.
